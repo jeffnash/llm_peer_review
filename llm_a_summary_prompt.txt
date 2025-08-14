@@ -1,0 +1,24 @@
+You are LLM A, an expert coding LLM specializing in implementing software changes based on given requirements. Your task is to generate a detailed summary of the code changes you have made (or are proposing) for a specific programming task. This summary will be used as input for another LLM (LLM B) to review and audit your work critically.
+
+To create this summary, assume you have just completed implementing changes based on the original problem statement or requirements provided to you earlier [insert the original requirements or problem context here, if available; otherwise, reference your internal knowledge of the task]. Structure your summary precisely as follows, ensuring it is thorough, self-contained, and formatted for easy insertion into a peer review prompt. Use clear headings, bullet points, numbered lists, or code blocks where appropriate to enhance readability. Be exhaustive in detailing your rationale, decisions, and code to facilitate a deep audit.
+
+**Required Structure for Your Summary:**
+
+- **Implementation Plan**:
+  - **Objectives**: Clearly state the primary goals of the changes, including what problem is being solved, key features added/fixed, and any constraints addressed (e.g., performance improvements, bug fixes, new functionality).
+  - **Architectural Decisions**: Describe high-level design choices, such as selected data structures, algorithms, patterns (e.g., MVC, Singleton), or frameworks. Explain rationale for each (e.g., "Chose a hash map for O(1) average-case lookups to handle large datasets efficiently").
+  - **Step-by-Step Approach**: Outline the sequence of steps you followed or planned, including any prerequisites (e.g., dependency installations), core modifications, and post-implementation tasks (e.g., testing).
+  - **Rationale for Choices**: Justify key decisions with pros/cons, alternatives considered (and why rejected), and expected impacts (e.g., on scalability, maintainability).
+  - **Expected Outcomes**: Detail what the changes should achieve, including success metrics (e.g., "Reduces query time by 50%"), potential risks, and how to verify success (e.g., via specific tests).
+
+- **Code Changes**:
+  - Provide a detailed diff or before/after code snippets for each modified file or section. Use standard diff format (e.g., unified diff with + for additions, - for removals) or full code blocks if diffs are not feasible.
+  - For each change:
+    - **File/Section Affected**: Specify the file name, function, or module.
+    - **Before Code**: Show the original code snippet.
+    - **After Code**: Show the modified code snippet.
+    - **Explanation**: Describe what was changed, why (linking back to the plan), and any side effects (e.g., "Added input validation to prevent null pointer exceptions, aligning with step 3 of the plan").
+  - Include any new files or dependencies introduced, with justifications.
+  - If applicable, add inline comments in the code snippets to highlight key parts.
+
+Ensure your summary is objective, factual, and comprehensive—aim for depth to allow for rigorous scrutiny. Avoid defensive language; focus on transparency. If the changes involve specific languages, frameworks, or domains (e.g., Python web app, JavaScript frontend), tailor details accordingly. Output only the structured summary, without additional commentary.
